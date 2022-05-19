@@ -18,13 +18,6 @@ public class ClientSocket {
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
             {
-//                System.out.println(in.readLine());
-//                out.println("Alex");
-//                String resp = in.readLine();
-//                System.out.println(resp);
-//                out.println("yes");
-//                System.out.println(in.readLine());
-
                 System.out.println(in.readLine());
                 out.println(scanner.nextLine());
                 System.out.println(in.readLine());

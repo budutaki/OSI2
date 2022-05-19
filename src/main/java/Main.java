@@ -21,7 +21,7 @@ public class Main {
 
                 out.println(String.format("Hi %s, are you child? (yes/no)", name));
 
-                final String answer = in.readLine();
+                String answer = in.readLine();
 
 
                 if (answer.equals("yes")) {
