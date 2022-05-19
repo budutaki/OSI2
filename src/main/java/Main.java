@@ -15,8 +15,7 @@ public class Main {
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-                System.out.println("New connection accepted\n" +
-                        "Write your name");
+                out.println("New connection accepted. Write your name");
 
                 final String name = in.readLine();
 
@@ -27,7 +26,8 @@ public class Main {
 
                 if (answer.equals("yes")) {
                     out.println(String.format("Welcome to the kids area, %s, Let's play!", name));
-                }  if (answer.equals("no")) {
+                }
+                if (answer.equals("no")) {
                     out.println(String.format("Welcome to the adult zone, %s, Have a good rest, or a good working day!", name));
                 }
 
