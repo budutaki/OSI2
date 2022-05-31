@@ -9,11 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
         {
-            try {
-                ServerSocket serverSocket = new ServerSocket(8080);
-                Socket clientSocket = serverSocket.accept();
-                PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            try (
+                    ServerSocket serverSocket = new ServerSocket(8080);
+                    Socket clientSocket = serverSocket.accept();
+                    PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                    BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
                 out.println("New connection accepted. Write your name");
 
